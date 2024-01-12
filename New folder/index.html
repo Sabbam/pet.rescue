@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawprints To Purfect Homes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+      
+
+    </style>
+</head>
+
+<body>
+        <!-- Preloader -->
+        <div id="preloader">
+            <div id="website-name">
+                Pawprints To Purfect Homes        </div>
+        </div>
+    
+       
+    <!-- Add your other scripts here -->
+
+
+
+    <!-- Contact Information Bar -->
+<div class="contact-info-bar text-center py-2">
+    <div class="container">
+        <span class="mr-2"><i class="fas fa-envelope"></i> info@Pawprints To Purfect Homes.org</span>
+        <!-- Add the dark/light mode toggle button -->
+        <button id="toggle-mode-button" class="btn btn-sm btn-dark ml-auto">Dark Mode</button>
+    </div>
+</div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pawprints To Purfect Homes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                                       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Image Slider -->
+    <div id="carouselExampleIndicators" class="carousel slide toggle-section" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('5.jpeg');">
+                <div class="carousel-caption">
+                    <h5>Find Your Furry Friend</h5>
+                    <p>Adopt, don't shop!</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('6.jpeg');">
+                <div class="carousel-caption">
+                    <h5>Support Our Cause</h5>
+                    <p>Your donation makes a difference.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('7.jpeg');">
+                <div class="carousel-caption">
+                    <h5>Join Our Mission</h5>
+                    <p>Helping animals find their forever homes.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('8.jpeg');">
+                <div class="carousel-caption">
+                    <h5>Make a Difference</h5>
+                    <p>Volunteer and change lives.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('9.jpeg');">
+                <div class="carousel-caption">
+                    <h5>Make a Difference</h5>
+                    <p>Volunteer and change lives.</p>
+                </div>
+            </div>
+            
+            <div class="carousel-item" style="background-image: url('6.jpeg');">
+                <div class="carousel-caption">
+                    <h5>Spread the Love</h5>
+                    <p>Share our mission with others.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Button Section with Pop-up Form -->
+    <section class="button-section toggle-section">
+        <div class="container">
+        <h2>Want To Save A Life</h2>
+        <button class="btn-popup" onclick="togglePopupForm('volunteer')">Click Here</button>
+           </div>
+</section>
+
+<!-- Popup Forms -->
+<div class="popup-form" id="volunteerForm">
+    <h2>Want To Save A Life</h2>
+    <form id="volunteerSubmitForm" action="process-volunteer.php" method="post">
+
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image">Upload Your Image:</label>
+            <input type="file" id="image" name="image" class="form-control-file" accept="image/*">
+        </div>
+       <div class="form-group">
+            <label for="location">Live Location:</label>
+            <div class="input-group">
+                <input type="text" id="location" name="location" class="form-control" readonly>
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-primary" onclick="getLocation()">Get Location</button>
+                </div>
+            </div>
+        </div>
+ <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" onclick="togglePopupForm('volunteer')">Close</button>
+    </form>
+</div>
+
+<div class="popup-form" id="donateForm">
+    <h2>Care For A Life</h2>
+    <form>
+        <div class="form-group">
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" name="amount" class="form-control" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" class="form-control">
+                <option value="creditCard">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <!-- Add more payment options as needed -->
+            </select>
+        </div>
+        <!-- Additional fields for credit card or PayPal details can be added here -->
+        <button type="submit" class="btn btn-primary">Donate</button>
+        <button type="button" class="btn btn-secondary" onclick="togglePopupForm('donate')">Close</button>
+    </form>
+</div>
+<!-- "Share Your Experience" Section -->
+<section id="share-experience" class=" py-5 toggle-section">
+
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center mb-4">Share Your Experience</h2>
+                <p class="text-center">We value your feedback. Share your thoughts or report any issues you've encountered.</p>
+
+                <!-- Feedback Form -->
+                <form id="feedbackForm" action="process-feedback.php" method="post">
+                    <div class="form-group">
+                        <label for="feedback" class="sr-only">Your Feedback:</label>
+                        <textarea id="feedback" name="feedback" class="form-control" rows="4" placeholder="Your Feedback" required></textarea>
+                    </div>
+
+                    <!-- Add more form fields as needed -->
+
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Follow Us Section -->
+    <section id="follow-us" class="bg-dark text-light py-5 toggle-section">
+
+    <div class="container">
+        <div class="follow-us-content text-center">
+            <h2 class="text-white mb-4">Follow Us</h2>
+            <p class="text-white-50">Stay connected with us on social media for the latest updates and stories.</p>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons mt-4">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <!-- Add more social media icons as needed -->
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Copyright Section -->
+    <div class="container mt-4 text-center toggle-section">
+        <p>&copy; 2024 Pawprints To Purfect Homes. All rights reserved.</p>
+    </div>
+<!-- Your custom scripts -->
+
+<!-- Other scripts or links to external scripts -->
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
