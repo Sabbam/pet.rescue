@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <title>Your Pet Rescue</title>
+    <style>
+      
+       
+    </style>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="website-name">
+            <b>P</b>et <b>R</b>escue
+        </div>
+    </div>
+
+</head>
+
+<body>
+
+    <!-- Contact Information Bar -->
+    <div class="contact-info-bar text-center py-2">
+        <div class="container">
+            <span class="mr-2"><i class="fas fa-envelope"></i> info@petrescue.org</span>
+            <!-- Add the dark/light mode toggle button -->
+            <button id="toggle-mode-button" class="btn btn-sm btn-dark ml-auto">Dark Mode</button>
+        </div>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pet Rescue</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="adopt.html">Adopt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="banner-text">
+            <h2>Welcome to Our Pet Rescue</h2>
+            <p>Discover our mission and commitment to animal welfare.</p>
+        </div>
+    </section>
+<!-- Advanced Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-6 mb-4 text-dark">
+                <div class="contact-card text-dark">
+                    <h2 class="mb-4">Contact Us</h2>
+                    <form class="contact-form text-dark" action="process-contact.php" method="post">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message:</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-lg-6">
+                <div class="contact-card">
+                    <h2 class="mb-4">Contact Details</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong>Email:</strong>
+                            <p>info@petrescue.org</p>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Phone:</strong>
+                            <p>+1 (123) 456-7890</p>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Address:</strong>
+                            <p>123 Main Street, Cityville, State, Zip Code</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="contact-card">
+                    <h2 class="mb-4">Visit Us</h2>
+                    <!-- You can embed a map here using services like Google Maps -->
+                    <div class="map-container">
+                        <div style="max-width:100%;overflow:hidden;color:red;width:750px;height:750px;"><div id="canvas-for-googlemap" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Visakhapatnam,+Andhra+Pradesh,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="our-googlemap-code" href="https://www.bootstrapskins.com/themes" id="grab-map-authorization">premium bootstrap themes</a><style>#canvas-for-googlemap img{max-height:none;max-width:none!important;background:none!important;}</style></div>
+                        <!-- Add your map embed code here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Copyright Section -->
+<div class="container mt-4 text-center">
+    <p>&copy; 2024 Pet Rescue. All rights reserved. Designed with <i class="fas fa-heart"></i> by Your Company.</p>   
+</div>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
