@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script href="script.js"></script>
+    <title>Adopt Pets Search</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(315deg, #3498db 0%, #2c3e50 74%);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+            color: #333;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<!-- Preloader -->
+<div id="preloader">
+    <img src="logo.jpg" class="img-fluid" >        
+    </div>
+    </div>
+
+    <div class="card">
+        <h1>Adopt Pets Search</h1>
+
+        <p>Click the button below to search for adoptable pets near your location:</p>
+
+        <button onclick="searchAdoptablePets()">Search Adoptable Pets</button>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function searchAdoptablePets() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+
+                    // Create a link with a geo: URI for the user's location
+                    const mapsLink = `https://www.google.com/maps/search/adoptable+pets/@${latitude},${longitude},15z`;
+
+                    // Open the link in a new tab or window
+                    window.open(mapsLink, '_blank');
+                }, function (error) {
+                    console.error('Error getting user location:', error.message);
+                    alert('Error getting your location. Please enable location services and try again.');
+                });
+            } else {
+                alert('Geolocation is not supported by your browser. Please use a different browser.');
+            }
+        }
+
+        function goBack() {
+            // Redirect to index.html
+            window.location.href = 'index.html';
+        }
+    </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var preloader = document.getElementById('preloader');
+
+    // Function to hide preloader
+    function hidePreloader() {
+        preloader.style.opacity = '0';
+        setTimeout(function () {
+            preloader.style.display = 'none';
+        }, 500); // 0.5 seconds timeout
+    }
+
+    // Function to show sections
+    function showSections() {
+        var sections = document.querySelectorAll('section');
+        sections.forEach(function (section) {
+            section.classList.add('show');
+        });
+    }
+
+    // Hide preloader after 5 seconds (adjust the timeout as needed)
+    setTimeout(function () {
+        hidePreloader();
+        showSections();
+    }, 5000);
+});
+
+// Function to toggle popup form visibility
+function togglePopupForm(formType) {
+    var formId = formType + "Form";
+    var popupForm = document.getElementById(formId);
+    if (popupForm.style.display === "none" || popupForm.style.display === "") {
+        popupForm.style.display = "block";
+    } else {
+        popupForm.style.display = "none";
+    }
+}
+
+// Function to get and display the current location
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+    var locationInput = document.getElementById("location");
+    locationInput.value = "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
+}
+//toggle modes
+document.addEventListener('DOMContentLoaded', function () {
+    var body = document.body;
+    var toggleButton = document.getElementById('toggle-mode-button');
+
+    // Function to toggle between dark and light modes
+    function toggleMode() {
+        body.classList.toggle('dark-mode');
+        // Toggle the mode for each section with the 'toggle-section' class
+        var sections = document.querySelectorAll('.toggle-section');
+        sections.forEach(function (section) {
+            section.classList.toggle('dark-mode');
+        });
+    }
+
+    // Event listener for the toggle button
+    toggleButton.addEventListener('click', toggleMode);
+});
+</script>    
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<!-- Your custom styles -->
+
+    <title>Pawprints To Purfect Homes</title>
+    <style>
+        /* Contact Information Bar Styles */
+.contact-info-bar {
+    color: #fff;
+    padding: 10px 0;
+}
+
+.contact-info-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-info-bar span {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-bar span i {
+    margin-right: 8px;
+}
+
+#toggle-mode-button {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-mode-button:hover {
+    background-color: #1e2124;
+}
+
+
+/* Contact Information Bar Styles */
+.contact-info-bar {
+    color: #fff;
+    padding: 10px 0;
+}
+
+.contact-info-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-info-bar span {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-bar span i {
+    margin-right: 8px;
+}
+
+#toggle-mode-button {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-mode-button:hover {
+    background-color: #1e2124;
+}
+
+         /* Navigation Styles */
+ /* Navigation Styles */
+ .navbar {
+    background-color: white; /* Dark background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly elevated box shadow */
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff; /* Navbar brand text color */
+    font-size: 1.5rem;
+}
+
+.navbar-toggler-icon {
+    border-color: #ffffff; /* Navbar toggler icon color */
+}
+
+.navbar-toggler {
+    background-color:wheat; /* Navbar toggler button color */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none; /* Remove focus box shadow */
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Navbar link text color */
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Navbar link text color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+    }
+}
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Additional custom styles */
+        .contact-info-bar {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .contact-info-bar i {
+            margin-right: 5px;
+        }
+
+       
+
+                /* Banner Section */
+                .banner-section {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('logo.jpg') center/cover no-repeat;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner-text {
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .banner-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .banner-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .service-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .service-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        
+        .service-popup {
+            background:grey;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+
+        .service-popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .service-popup-close:hover {
+            color: #007bff;
+        }
+
+        .form-popup-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 767px) {
+            /* ... Your existing responsive styles ... */
+        }
+        
+    </style>
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="logo.jpg" class="img-fluid" >        
+        </div>
+        </div>
+    
+</head>
+
+<body>
+
+    <!-- Contact Information Bar -->
+    <div class="contact-info-bar text-center py-2">
+        <div class="container">
+            <span class="mr-2"><i class="fas fa-envelope"></i> info@PawprintsToPurfectHomes.org</span>
+            <!-- Add the dark/light mode toggle button -->
+            <button id="toggle-mode-button" class="btn btn-sm btn-dark ml-auto">Dark Mode</button>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pawprints To Purfect Homes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="banner-text">
+            <h2>Services</h2>
+            <p>Pawprints To Purfect Homes</p>
+        </div>
+    </section>
+           <!-- Volunteer Form Popup -->
+    <div class="popup-form" id="volunteerForm">
+        <span class="popup-form-close" onclick="togglePopupForm('volunteer')">&times;</span>
+        <h2>Want To Save A Life</h2>
+        <form id="volunteerSubmitForm" action="process-volunteer.php" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Upload Your Image:</label>
+                <input type="file" id="image" name="image" class="form-control-file" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="location">Live Location:</label>
+                <div class="input-group">
+                    <input type="text" id="location" name="location" class="form-control" readonly>
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary" onclick="getLocation()">Get Location</button>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" onclick="togglePopupForm('volunteer')">Close</button>
+        </form>
+    </div>
+
+    <!-- Donate Form Popup -->
+    <div class="popup-form" id="donateForm">
+        <span class="popup-form-close" onclick="togglePopupForm('donate')">&times;</span>
+        <h2>Care For A Life</h2>
+        <form>
+            <div class="form-group">
+                <label for="amount">Donation Amount:</label>
+                <input type="number" id="amount" name="amount" class="form-control" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod" class="form-control">
+                    <option value="creditCard">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <!-- Add more payment options as needed -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Donate</button>
+            <button type="button" class="btn btn-secondary" onclick="togglePopupForm('donate')">Close</button>
+        </form>
+    </div>
+
+    <!-- Service Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="row">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="service-card" onclick="toggleServicePopup('service1')">
+                        <h4>First aid</h4>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="service-card" onclick="toggleServicePopup('service2')">
+                        <h4>Adoption</h4>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="service-card" onclick="toggleServicePopup('service3')">
+                        <h4>Save A Life</h4>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="service-card" onclick="toggleServicePopup('service4')">
+                        <h4>Donation</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Popups -->
+    <!-- Service 1 Popup -->
+    <div id="service1Popup" class="service-popup">
+        <span class="service-popup-close" onclick="toggleServicePopup('service1')">&times;</span>
+        <div class="service-popup-content">
+            <h2>First Aid</h2>
+            <p>The user captures the photograph of the animal that is isolated/injured or needed to be taken care of and posts it into the application.
+                The location details are updated on the photograph.
+                The animal(dog/cat) is then directed to the nearest rescue center with the assistance of rescue team.
+                In case of injury, the animal is headed to the center after the team provides minimal first aid to it.
+            </p>
+            <div class="form-popup-button">
+                <!-- You can add additional buttons or content here if needed -->
+            </div>
+        </div>
+    </div>
+
+        <!-- Service 2 Popup -->
+        <div id="service2Popup" class="service-popup">
+            <span class="service-popup-close" onclick="toggleServicePopup('service2')">&times;</span>
+            <div class="service-popup-content">
+                <h2>Adoption</h2>
+                <p>After the team safely moves the animal (cat/dog) to the rescue center, the same animal could be adopted by any user of the application. He/she will be directed to carry out the process with the help of location details of the center. The later process will be monitored by the center.</p>
+                <div class="form-popup-button">
+                    <button class="btn btn-success" onclick="redirectToAdoptForm()">Adopt</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Service 3 Popup -->
+        <div id="service3Popup" class="service-popup">
+            <span class="service-popup-close" onclick="toggleServicePopup('service3')">&times;</span>
+            <div class="service-popup-content">
+                <h2>Save a Life</h2>
+                <p>Rescuing animals is a noble act of saving creatures from danger or suffering. It can involve a variety of situations, from plucking a kitten from a tree to rehabilitating a wild animal injured in a car accident. Animal shelters and rescue organizations take in animals that have been abandoned, surrendered, or seized from abusive owners. These animals are then provided with food, shelter, medical care, and socialization until they can be adopted into loving homes.</p>
+                <div class="form-popup-button">
+                    <button class="btn btn-success" onclick="redirectToSaveLifeForm()">Save A Life</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Service 4 Popup -->
+        <div id="service4Popup" class="service-popup">
+            <span class="service-popup-close" onclick="toggleServicePopup('service4')">&times;</span>
+            <div class="service-popup-content">
+                <h2>Donation </h2>
+                <p>Animal rescue centers provide temporary care for lost, abandoned, or abused animals. They work to find these animals loving homes, provide them with medical care, and give them the love and attention they deserve. Donations to animal rescue centers are essential to their work. Every rupee donated helps them to provide food, shelter, and medical care for the animals in their care. Your tiny contribution can fill the hearts of the poor creatures with tender happiness.</p>
+                <div class="form-popup-button">
+                    <button class="btn btn-success" onclick="redirectToDonationForm()">Donate</button>
+                </div>
+            </div>
+        </div>
+    
+    
+    <!-- Form Popup -->
+    <div class="popup-form" id="formPopup">
+        <span class="popup-form-close" onclick="toggleFormPopup()">&times;</span>
+        <!-- Add your form content here if needed -->
+    </div>
+<script>
+            function redirectToAdoptForm() {
+            alert("This page redirects you to the adopt registration form");
+            window.location.href = "adopt.html";
+        }
+
+        function redirectToSaveLifeForm() {
+            alert("This page redirects you to save a life registration form");
+            window.location.href = "savelife.html";
+        }
+
+        function redirectToDonationForm() {
+            alert("This page redirects you to donation form");
+            window.location.href = "donation.html";
+        }
+    </script>
+
+    <!-- ... (Your existing scripts) ... -->
+    <script>
+        function toggleServicePopup(serviceId) {
+            var popup = document.getElementById(serviceId + 'Popup');
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function toggleFormPopup() {
+            var popup = document.getElementById('formPopup');
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+    <!-- Copyright Section -->
+    <div class="container mt-4 text-center">
+        <p>&copy; 2024 Pawprints To Purfect Homes. All rights reserved.  </p>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
