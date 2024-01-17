@@ -285,40 +285,7 @@
         </div>
     </section>
            <!-- Volunteer Form Popup -->
-    <div class="popup-form" id="volunteerForm">
-        <span class="popup-form-close" onclick="togglePopupForm('volunteer')">&times;</span>
-        <h2>Want To Save A Life</h2>
-        <form id="volunteerSubmitForm" action="process-volunteer.php" method="post">
-            <div class="form-group">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="image">Upload Your Image:</label>
-                <input type="file" id="image" name="image" class="form-control-file" accept="image/*">
-            </div>
-            <div class="form-group">
-                <label for="location">Live Location:</label>
-                <div class="input-group">
-                    <input type="text" id="location" name="location" class="form-control" readonly>
-                    <div class="input-group-append">
-                        <button type="button" class="btn btn-primary" onclick="getLocation()">Get Location</button>
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-secondary" onclick="togglePopupForm('volunteer')">Close</button>
-        </form>
-    </div>
-
+         
     
     <!-- Service Section -->
     <section class="service-section">
@@ -427,7 +394,7 @@
 
         function redirectToDonationForm() {
             alert("This page redirects you to donation form");
-            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSccwBEgwKuYfdyBkl76jmDGiw9TRmPmlRWP3OpQ_VFsfr9tDw/viewform?usp=sf_link";
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSccwBEgwKuYfdyBkl76jmDGiw9TRmPmlRWP3OpQ_VFsfr9tDw/viewform";
         }
     </script>
 
