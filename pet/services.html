@@ -319,28 +319,7 @@
         </form>
     </div>
 
-    <!-- Donate Form Popup -->
-    <div class="popup-form" id="donateForm">
-        <span class="popup-form-close" onclick="togglePopupForm('donate')">&times;</span>
-        <h2>Care For A Life</h2>
-        <form>
-            <div class="form-group">
-                <label for="amount">Donation Amount:</label>
-                <input type="number" id="amount" name="amount" class="form-control" min="1" required>
-            </div>
-            <div class="form-group">
-                <label for="paymentMethod">Payment Method:</label>
-                <select id="paymentMethod" name="paymentMethod" class="form-control">
-                    <option value="creditCard">Credit Card</option>
-                    <option value="paypal">PayPal</option>
-                    <!-- Add more payment options as needed -->
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Donate</button>
-            <button type="button" class="btn btn-secondary" onclick="togglePopupForm('donate')">Close</button>
-        </form>
-    </div>
-
+    
     <!-- Service Section -->
     <section class="service-section">
         <div class="container">
@@ -443,12 +422,12 @@
 
         function redirectToSaveLifeForm() {
             alert("This page redirects you to save a life registration form");
-            window.location.href = "savelife.html";
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe1HOMWaVsmAovUjINOoRXF_kRGfCS2UFaKqVm3SDs8LbKqTg/viewform";
         }
 
         function redirectToDonationForm() {
             alert("This page redirects you to donation form");
-            window.location.href = "404.html";
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSccwBEgwKuYfdyBkl76jmDGiw9TRmPmlRWP3OpQ_VFsfr9tDw/viewform?usp=sf_link";
         }
     </script>
 
